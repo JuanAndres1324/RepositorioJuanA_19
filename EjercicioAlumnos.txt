@@ -1,0 +1,24 @@
+Algoritmo ContarAlumnosConMatricula
+
+    Definir cantidadConMatricula, cantidadSinMatricula, matricula Como Entero
+    cantidadConMatricula <- 0
+    cantidadSinMatricula <- 0
+
+    Escribir "Ingrese la cantidad total de alumnos:"
+    Leer cantidadTotalAlumnos
+
+    Para i <- 1 Hasta cantidadTotalAlumnos Hacer
+        Escribir "Ingrese la matrícula del alumno ", i, ":"
+        Leer matricula
+
+        Si matricula > 0 Entonces
+            cantidadConMatricula <- cantidadConMatricula + 1
+        Sino
+            cantidadSinMatricula <- cantidadSinMatricula + 1
+        FinSi
+    FinPara
+
+    Escribir "Cantidad de alumnos con matrícula:", cantidadConMatricula
+    Escribir "Cantidad de alumnos sin matrícula:", cantidadSinMatricula
+
+FinAlgoritmo

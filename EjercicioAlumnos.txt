@@ -1,24 +1,61 @@
-Algoritmo ContarAlumnosConMatricula
+Algoritmo OperacionesComplejas
 
-    Definir cantidadConMatricula, cantidadSinMatricula, matricula Como Entero
-    cantidadConMatricula <- 0
-    cantidadSinMatricula <- 0
+    Funcion Multiplicar(numero1, numero2)
+        Devolver numero1 * numero2
+    FinFuncion
 
-    Escribir "Ingrese la cantidad total de alumnos:"
-    Leer cantidadTotalAlumnos
-
-    Para i <- 1 Hasta cantidadTotalAlumnos Hacer
-        Escribir "Ingrese la matrícula del alumno ", i, ":"
-        Leer matricula
-
-        Si matricula > 0 Entonces
-            cantidadConMatricula <- cantidadConMatricula + 1
+    Funcion Dividir(numero1, numero2)
+        Si numero2 <> 0 Entonces
+            Devolver numero1 / numero2
         Sino
-            cantidadSinMatricula <- cantidadSinMatricula + 1
+            Escribir "Error: No se puede dividir por cero."
+            Devolver 0
         FinSi
-    FinPara
+    FinFuncion
 
-    Escribir "Cantidad de alumnos con matrícula:", cantidadConMatricula
-    Escribir "Cantidad de alumnos sin matrícula:", cantidadSinMatricula
+    Funcion Sumar(numero1, numero2)
+        Devolver numero1 + numero2
+    FinFuncion
+
+    Definir opcion Como Caracter
+    Definir num1, num2, resultado Como Caracter
+
+    Repetir
+        Escribir "Menu de opciones:"
+        Escribir "1. Multiplicar"
+        Escribir "2. Dividir"
+        Escribir "3. Sumar"
+        Escribir "4. Salir"
+        Escribir "Ingrese la opción deseada:"
+        Leer opcion
+
+        Segun opcion
+            Caso 1:
+                Escribir "Ingrese el primer número:"
+                Leer num1
+                Escribir "Ingrese el segundo número:"
+                Leer num2
+                resultado <- Multiplicar(num1, num2)
+                Escribir "El resultado de la multiplicación es:", resultado
+            Caso 2:
+                Escribir "Ingrese el primer número:"
+                Leer num1
+                Escribir "Ingrese el segundo número:"
+                Leer num2
+                resultado <- Dividir(num1, num2)
+                Escribir "El resultado de la división es:", resultado
+            Caso 3:
+                Escribir "Ingrese el primer número:"
+                Leer num1
+                Escribir "Ingrese el segundo número:"
+                Leer num2
+                resultado <- Sumar(num1, num2)
+                Escribir "El resultado de la suma es:", resultado
+            Caso 4:
+                Escribir "Saliendo del programa..."
+            De Otro Modo:
+                Escribir "Opción no válida."
+        FinSegun
+    Hasta que opcion = 4
 
 FinAlgoritmo

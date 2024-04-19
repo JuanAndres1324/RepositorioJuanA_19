@@ -1,7 +1,7 @@
 Algoritmo CalculoRaizCuadrada
-    Definir numero, Nraiz, iteraciones Como logico
+    Definir numero, Nraiz, interaciones Como Entero
 	
-    Escribir "Ingrese un número:"
+    Escribir "Ingrese un nï¿½mero:"
     Leer numero
 	
     Nraiz = numero / 2
@@ -11,6 +11,6 @@ Algoritmo CalculoRaizCuadrada
         Nraiz = 0.5 * (Nraiz + numero / Nraiz)
     Fin Para
 	
-    Escribir "La raíz cuadrada de ", iteraciones, " es aproximadamente: ", numero
+    Escribir "La raï¿½z cuadrada de ", interaciones, " es aproximadamente: ", numero
 	
 FinAlgoritmo
